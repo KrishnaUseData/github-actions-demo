@@ -1,8 +1,8 @@
-name: Actions Workflow
-  on: [push]
+name: Actions workflow
+on: [push]
 
-  jobs:
-    run-javascript-actions:
+jobs:
+  run-javascript-actions:
     runs-on: ubuntu-latest
     steps:
       - name: Simple JS Actions
