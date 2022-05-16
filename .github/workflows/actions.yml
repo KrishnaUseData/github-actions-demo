@@ -5,6 +5,10 @@ jobs:
   run-javascript-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls -la
       - name: Simple JS Actions
         id: greet
         uses: actions/hello-world-javascript-action@v1
