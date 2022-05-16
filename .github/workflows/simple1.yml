@@ -19,6 +19,7 @@ jobs:
         shell: python
   run-powershell-commnds:
     runs-on: windows-latest
+    needs: ['run-shell-commands']
     steps:
       - name: Directory Powershell 
         shell: powershell
