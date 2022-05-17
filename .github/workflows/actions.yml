@@ -1,5 +1,8 @@
 name: Actions workflow
-on: [push, pull_request]
+on: 
+  push:
+  pull_request: 
+    types: [closed, assigned, reopened, opened]
 
 jobs:
   run-javascript-actions:
