@@ -16,6 +16,7 @@ jobs:
         shell: python
         run: |
           import platform
+          import pip
           print(platform.processor())
           print(pip.list)
         
