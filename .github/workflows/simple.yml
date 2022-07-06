@@ -18,5 +18,12 @@ jobs:
           import platform
           import pip
           print(platform.processor())
-          
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: windows directory path
+        run: get-location
+      - name: powershell directory location 
+        run: pwd
+        shell: bash
         
