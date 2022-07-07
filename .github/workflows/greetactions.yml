@@ -1,0 +1,15 @@
+name: Hello world Java script
+
+on: push
+
+jobs:
+  run-js-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: start the js actions/checkout
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: "krishna"
+      - name: output of the actions
+        run: echo "${{steps.greet.outputs.time}}"
