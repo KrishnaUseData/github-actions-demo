@@ -5,7 +5,17 @@ on: push
 jobs:
   run-js-commands:
     runs-on: ubuntu-latest
-    steps:
+    steps: 
+      - name: list all Files
+        run: |
+          pwd
+          ls -la    
+      - name: checkout files
+        uses: actions/checkout@v1
+      - name: list all Files
+        run: |
+          pwd
+          ls -la    
       - name: start the js actions/checkout
         id: greet
         uses: actions/hello-world-javascript-action@v1
