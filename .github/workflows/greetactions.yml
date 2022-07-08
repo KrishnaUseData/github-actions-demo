@@ -9,7 +9,11 @@ jobs:
       - name: list all Files
         run: |
           pwd
-          ls -la    
+          ls -la
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_SHA
+          echo $GITHUB_WORKSPACE
+          echo "${{github.token}}"    
       - name: checkout files
         uses: actions/checkout@v2
       - name: list all Files
