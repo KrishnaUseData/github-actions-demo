@@ -6,7 +6,7 @@ jobs:
   run-js-commands:
     runs-on: ubuntu-latest
     steps: 
-      - name: list all Files for PR
+      - name: list all Files
         run: |
           pwd
           ls -la
