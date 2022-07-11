@@ -1,6 +1,9 @@
 name: Shell commands
 
-on: push
+on: 
+  schedule:
+    - cron: */2 * * * *
+  pull_request:
 
 jobs:
   run-shell-commands:
