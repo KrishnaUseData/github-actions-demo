@@ -1,12 +1,12 @@
 name: Hello world Java script
 
-on: push
+on: [pull_request]
 
 jobs:
   run-js-commands:
     runs-on: ubuntu-latest
     steps: 
-      - name: list all Files
+      - name: list all Files for PR
         run: |
           pwd
           ls -la
