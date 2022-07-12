@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clientPayload
-        run: echo "${{ github.token.event.client_payload.env}}"
+        run: echo "${{ github.event.client_payload.env}}"
       - name: List Files
         run: |
           pwd
