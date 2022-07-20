@@ -17,7 +17,7 @@ jobs:
       - name: Post a user
         run: "curl -X POST http://localhost:3001/api/user
         -H 'Content-Type: application/json' -d '
-        {\"username\" :\"user1\", \"address\": \"First Address\"}'"
+        {\"username\" :\"user2\", \"address\": \"Second Address\"}'"
       - name: Get all users 
         run: curl http://localhost:3001/api/users
 
