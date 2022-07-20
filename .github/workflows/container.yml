@@ -41,6 +41,6 @@ jobs:
       - name: Run a shell script
         uses: docker://node:10.18.0-jessie
         with:
-          entrypoint: ./script.sh
+          entrypoint: "./script.sh"
           args: "Hello Krishna"
         
