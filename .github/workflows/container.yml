@@ -39,7 +39,7 @@ jobs:
           cat /etc/os-release
       - uses: actions/checkout@v1
       - name: Run a shell script
-        uses: docker://node:10.18.0-jessie
+        uses: docker://node:16-bullseye
         with:
           entrypoint: "./script.sh"
           args: "Hello Krishna"
