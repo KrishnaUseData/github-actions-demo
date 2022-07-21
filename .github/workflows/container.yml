@@ -34,11 +34,17 @@ jobs:
           entrypoint: /usr/local/bin/node
           args: -v
       - uses: actions/checkout@v1
-      - name: Run a shell script
-        uses: docker://node:16-bullseye
-        with:
-          entrypoint: ./script.sh
-          args: "Hello Krishna"
+      # - name: Run a shell script
+      #   uses: docker://node:16-bullseye
+      #   with:
+      #     entrypoint: ./script.sh
+      #     args: "Hello Krishna"
+      - name: Sending a slack message
+        uses: docker://technosophos/slack-notify
+        env:
+          SLACK_WEBHOOK: ${{secrets.SLACK_WEBHOOK}}
+          SLACK_MESSAGE: "Hello User"
+ 
   node-docker1: 
     runs-on: ubuntu-latest
     container: 
