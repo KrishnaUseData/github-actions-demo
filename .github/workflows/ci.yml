@@ -12,6 +12,6 @@ jobs:
         with:
           node-version: "12.x"
       - name: install dependency
-        run: npm ci
+        run: npm install
 
     
