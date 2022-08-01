@@ -1,0 +1,35 @@
+name: Project-X workflow
+
+on: 
+  push:
+    branches:
+      - worflow
+  pull_request:
+    types: [opened, closed, reopened, closed]
+  
+
+jobs:
+  project-x_multi-branch_project:
+    runs-on: ubuntu-latest
+    steps:
+      # - name: Checkout
+      #   uses: actions/checkout@v2
+      #   with: 
+      #   ref: identiv/inve-project-x/HotFix_18122020_NewParts
+      - name: Setup Java JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Checkout Code from branch 
+        uses: actions/checkout@v3
+        with: 
+          ref: HotFix_18122020_NewParts
+      # - name: Validate Gradle wrapper
+      #   uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+        #run: ./gradlew build
+        with:
+          #arguments: ./gradlew build
+          gradle-executable: server
