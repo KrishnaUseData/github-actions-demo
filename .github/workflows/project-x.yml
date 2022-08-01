@@ -20,8 +20,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          java-package: 'jdk+fx'
-          distribution: 'liberica'
+          distribution: 'adopt'
       - name: Checkout Code from branch 
         uses: actions/checkout@v3
         with: 
@@ -32,4 +31,4 @@ jobs:
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
           arguments: build
-          gradle-executable: elide/build/libs
+          gradle-executable: server
