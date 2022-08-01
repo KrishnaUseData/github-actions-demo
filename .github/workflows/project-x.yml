@@ -3,7 +3,6 @@ name: Project-X workflow
 on: 
   push:
     branches:
-      - HotFix_18122020_NewParts
       - worflow
   pull_request:
     types: [opened, closed, reopened, closed]
@@ -21,8 +20,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          java-package: 'jdk+fx'
-          distribution: 'liberica'
+          distribution: 'adopt'
       - name: Checkout Code from branch 
         uses: actions/checkout@v3
         with: 
@@ -31,5 +29,7 @@ jobs:
       #   uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Build with Gradle
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+        run: ./gradlew build
         with:
-          arguments: build
+          arguments: ./gradlew build
+          gradle-executable: server
