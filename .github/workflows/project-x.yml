@@ -3,7 +3,8 @@ name: Project-X workflow
 on: 
   push:
     branches:
-      - workflow
+      - HotFix_18122020_NewParts
+      - worflow
   pull_request:
     types: [opened, closed, reopened, closed]
   
@@ -25,7 +26,7 @@ jobs:
       - name: Checkout Code from branch 
         uses: actions/checkout@v3
         with: 
-          ref: identiv/inve-project-x/HotFix_18122020_NewParts
+          ref: HotFix_18122020_NewParts
       # - name: Validate Gradle wrapper
       #   uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Build with Gradle
