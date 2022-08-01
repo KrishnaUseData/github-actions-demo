@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: checkout/actions@v2
+        uses: actions/checkout@v2
       - name: Setup Java JDK 11
         uses: actions/setup-java@v3
         with:
@@ -21,7 +21,7 @@ jobs:
           java-package: 'jdk+fx'
           distribution: 'liberica'
       - name: Checkout Code from branch 
-        uses: checkout/actions@v3
+        uses: actions/checkout@v3
         with: 
           ref: HotFix_18122020_NewParts
       - name: Validate Gradle wrapper
