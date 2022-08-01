@@ -3,7 +3,7 @@ name: Project-X workflow
 on: 
   push:
     branches:
-      - HotFix_18122020_NewParts
+      - workflow
   pull_request:
     types: [opened, closed, reopened, closed]
   
