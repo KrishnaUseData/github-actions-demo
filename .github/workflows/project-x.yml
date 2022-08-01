@@ -22,8 +22,8 @@ jobs:
           distribution: 'liberica'
       - name: Checkout Code from branch 
         uses: actions/checkout@v3
-        with: 
-          ref: identiv/inve-project-x/HotFix_18122020_NewParts
+        # with: 
+        #   ref: identiv/inve-project-x/HotFix_18122020_NewParts
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Build with Gradle
