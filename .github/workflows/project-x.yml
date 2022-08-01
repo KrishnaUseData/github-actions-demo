@@ -3,7 +3,7 @@ name: Project-X workflow
 on: 
   push:
     branches:
-      - develop
+      - workflow
   pull_request:
     types: [opened, closed, reopened, closed]
   
